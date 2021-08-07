@@ -1,40 +1,21 @@
 "use strict";
 
-/* 
+const numberOfFlims = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-let number = 5;
-
-console.log(number);
-
-const obj = {
-    a: 50
+const personalMovieDB = {
+    count: numberOfFlims,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
 
-obj.a = 10;
+const lastViewMovie0 = prompt('Один из последних просмотренных фильмов?', ''),
+      ratingMovie0 = prompt('На сколько оцените его?', ''),
+      lastViewMovie1 = prompt('Один из последних просмотренных фильмов?', ''),
+      ratingMovie1 = prompt('На сколько оцените его?', '');
 
-console.log(obj);
+personalMovieDB.movies[lastViewMovie0] = ratingMovie0;
+personalMovieDB.movies[lastViewMovie1] = ratingMovie1;
 
-console.log(name);
-
-var name = "Ivan";
-
-{
-    var result = 50;
-}
-
-console.log(result);
-
-const human = {
-    name: "John",
-    age: 25,
-    isMarried: false
-};
-
-console.log(human.name);
-console.log(human.age);
-
-let arr = ['plum.png', 'orange.jpg', 6, 'apple.bmp', {}, []]; //Массив может содержать в себе любые типы данных в том числе и объекты и другие массивы
-console.log(arr[4]);
-
-*/
-
+console.log(personalMovieDB);
